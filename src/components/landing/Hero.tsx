@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Bot, Gauge, Brain } from "lucide-react";
+import { ArrowRight, Sparkles, Bot, Gauge, Brain, Car } from "lucide-react";
 
 const features = [
   {
@@ -23,6 +23,111 @@ const features = [
   },
 ];
 
+const FloatingCar = () => {
+  const generateRandomPath = () => {
+    const numPoints = 8;
+    const points = [];
+    let prevY = 30; // Start higher up
+
+    for (let i = 0; i < numPoints; i++) {
+      // Add some randomness to x positions while maintaining general left-to-right movement
+      const xProgress = i / (numPoints - 1);
+      const xVariation = Math.random() * 20 - 10; // ±10% variation
+      const x = `${Math.max(0, Math.min(100, xProgress * 100 + xVariation))}vw`;
+
+      // Generate y position with smooth transitions, keeping it in the upper portion
+      const yVariation = Math.random() * 20 - 10; // ±10vh variation
+      const y = `${Math.max(15, Math.min(45, prevY + yVariation))}vh`; // Constrain to upper area
+      prevY = parseFloat(y);
+
+      points.push({ x, y });
+    }
+    return points;
+  };
+
+  return (
+    <motion.div
+      className="absolute z-10"
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{
+        scale: 1,
+        opacity: 1,
+        x: generateRandomPath().map((p) => p.x),
+        y: generateRandomPath().map((p) => p.y),
+        rotate: [-8, 0, 8, 0, -8],
+      }}
+      transition={{
+        scale: { duration: 0.5 },
+        opacity: { duration: 0.5 },
+        x: {
+          duration: 25,
+          repeat: Infinity,
+          ease: "linear",
+        },
+        y: {
+          duration: 25,
+          repeat: Infinity,
+          ease: "easeInOut",
+        },
+        rotate: {
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        },
+      }}
+    >
+      <div className="relative">
+        {/* Enhanced glow effect */}
+        <motion.div
+          className="absolute -inset-3 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-full blur-xl opacity-30"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2],
+            rotate: [0, 180, 360],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        {/* Car icon with enhanced trail effect */}
+        <div className="relative">
+          <motion.div
+            className="absolute -left-16 top-1/2 -translate-y-1/2 h-1 rounded-full"
+            style={{
+              background:
+                "linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.1))",
+            }}
+            animate={{
+              width: ["3rem", "5rem", "3rem"],
+              opacity: [0.2, 0.4, 0.2],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            animate={{
+              scale: [1, 1.08, 1],
+              y: [-1, 1, -1],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <Car className="w-12 h-12 text-white relative z-10 -scale-x-100" />
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
 export default function Hero() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-gray-950 flex items-center">
@@ -36,6 +141,9 @@ export default function Hero() {
         </div>
         <div className="absolute inset-0 bg-gray-950/90 backdrop-blur-3xl" />
       </div>
+
+      {/* Add the floating car */}
+      <FloatingCar />
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-7xl mx-auto">
