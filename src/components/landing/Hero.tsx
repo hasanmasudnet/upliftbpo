@@ -94,7 +94,7 @@ const FloatingCar = () => {
         {/* Car icon with enhanced trail effect */}
         <div className="relative">
           <motion.div
-            className="absolute -left-16 top-1/2 -translate-y-1/2 h-1 rounded-full"
+            className="absolute -right-16 top-1/2 -translate-y-1/2 h-1 rounded-full"
             style={{
               background:
                 "linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.1))",
@@ -120,7 +120,7 @@ const FloatingCar = () => {
               ease: "easeInOut",
             }}
           >
-            <Car className="w-12 h-12 text-white relative z-10 -scale-x-100" />
+            <Car className="w-12 h-12 text-white relative z-10" />
           </motion.div>
         </div>
       </div>
