@@ -14,7 +14,7 @@ const sectors = [
       "Automated appointment reminders",
     ],
     image:
-      "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=1200",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200",
     color: "from-blue-500 to-blue-600",
     bgColor: "from-blue-500/10 to-blue-600/10",
   },
@@ -29,7 +29,7 @@ const sectors = [
       "Post-purchase follow-up calls",
     ],
     image:
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200",
+      "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=1200",
     color: "from-purple-500 to-purple-600",
     bgColor: "from-purple-500/10 to-purple-600/10",
   },
@@ -44,7 +44,7 @@ const sectors = [
       "Pickup & drop-off coordination",
     ],
     image:
-      "https://images.unsplash.com/photo-1565843708714-52ecf69ab81f?q=80&w=1200",
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200",
     color: "from-emerald-500 to-emerald-600",
     bgColor: "from-emerald-500/10 to-emerald-600/10",
   },
@@ -61,11 +61,11 @@ export default function ServiceSectors() {
           className="text-center mb-16 relative"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 text-transparent bg-clip-text">
-            AI-Enhanced Offshore Teams
+            Professional Offshore Teams
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Combining skilled offshore agents with AI technology for superior
-            auto service support and customer experience
+            Combining skilled offshore agents with advanced technology for
+            superior auto service support and customer experience
           </p>
         </motion.div>
 

@@ -170,7 +170,7 @@ export default function Hero() {
               Elevate Your Auto Service with
               <br />
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 text-transparent bg-clip-text">
-                AI-Powered Offshore Teams
+                Professional Offshore Teams
               </span>
             </motion.h1>
 

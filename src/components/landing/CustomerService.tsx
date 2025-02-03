@@ -9,7 +9,7 @@ const features = [
       "Reduce overhead costs significantly compared to in-house staffing",
     gradient: "from-blue-500 to-blue-600",
     image:
-      "https://images.unsplash.com/photo-1522071901873-411886a10004?q=80&w=1200",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200",
   },
   {
     icon: MessageSquare,
@@ -17,7 +17,7 @@ const features = [
     description: "Round-the-clock support improving customer experience",
     gradient: "from-purple-500 to-purple-600",
     image:
-      "https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=1200",
+      "https://media.gettyimages.com/id/1803777150/photo/happy-woman-face-and-headphones-in-call-center-for-customer-service-telemarketing-or-support.jpg?s=2048x2048&w=gi&k=20&c=KggZEbgLA0Xg0IIasaI1z48S9fmRso4QgE1CZtdZTT0=",
   },
   {
     icon: Clock,
@@ -26,7 +26,7 @@ const features = [
       "Easily scale during peak seasons without burdening in-house teams",
     gradient: "from-emerald-500 to-emerald-600",
     image:
-      "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=1200",
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200",
   },
   {
     icon: Shield,
@@ -35,7 +35,7 @@ const features = [
       "Focus dealership staff on in-person interactions while we handle administrative tasks",
     gradient: "from-amber-500 to-amber-600",
     image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200",
   },
 ];
 
