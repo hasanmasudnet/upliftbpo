@@ -1,5 +1,6 @@
-import { HeadphonesIcon, TrendingUp, Settings } from "lucide-react";
-import { Card } from "@/components/ui/card";
+import { HeadphonesIcon, TrendingUp, Settings, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const sectors = [
   {
@@ -12,6 +13,9 @@ const sectors = [
       "Seamless ticket escalation",
       "Customer satisfaction tracking",
     ],
+    image:
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200",
+    color: "from-blue-500 to-blue-600",
   },
   {
     icon: TrendingUp,
@@ -23,6 +27,9 @@ const sectors = [
       "Sales performance analytics",
       "Personalized recommendations",
     ],
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
+    color: "from-purple-500 to-purple-600",
   },
   {
     icon: Settings,
@@ -34,40 +41,94 @@ const sectors = [
       "Resource optimization",
       "Real-time tracking",
     ],
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200",
+    color: "from-emerald-500 to-emerald-600",
   },
 ];
 
 export default function ServiceSectors() {
   return (
-    <div className="py-16 bg-white">
+    <div className="py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Core Sectors</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+            Our Core Sectors
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Delivering excellence across three key business areas with
             AI-powered solutions
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {sectors.map((sector, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-              <div className="flex flex-col items-center text-center">
-                <div className="p-3 rounded-full bg-blue-50 mb-4">
-                  <sector.icon className="w-8 h-8 text-blue-600" />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+            >
+              <div className="group h-full">
+                <div className="relative overflow-hidden rounded-2xl h-full bg-white shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                  {/* Image Section */}
+                  <div className="relative h-48">
+                    <div className="absolute inset-0">
+                      <img
+                        src={sector.image}
+                        alt={sector.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+                    </div>
+                    <div className="relative p-6 flex flex-col h-full justify-end">
+                      <div
+                        className={`p-3 rounded-xl bg-gradient-to-r ${sector.color} w-12 h-12 flex items-center justify-center mb-4`}
+                      >
+                        <sector.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {sector.title}
+                      </h3>
+                      <p className="text-gray-200">{sector.description}</p>
+                    </div>
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="p-6">
+                    <div className="space-y-4">
+                      {sector.benefits.map((benefit, idx) => (
+                        <motion.div
+                          key={idx}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: idx * 0.1 }}
+                          className="flex items-center gap-3 group-hover:translate-x-1 transition-transform"
+                        >
+                          <div
+                            className={`w-2 h-2 rounded-full bg-gradient-to-r ${sector.color}`}
+                          />
+                          <span className="text-gray-700">{benefit}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <Button
+                      className={`w-full mt-6 bg-gradient-to-r ${sector.color} text-white hover:opacity-90 transition-opacity`}
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{sector.title}</h3>
-                <p className="text-gray-600 mb-6">{sector.description}</p>
-                <ul className="space-y-2 text-left w-full">
-                  {sector.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-700">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
               </div>
-            </Card>
+            </motion.div>
           ))}
         </div>
       </div>

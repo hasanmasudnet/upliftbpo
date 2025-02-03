@@ -1,6 +1,5 @@
 import Hero from "./landing/Hero";
 import ServiceSectors from "./landing/ServiceSectors";
-import Features from "./landing/Features";
 import AISection from "./landing/AISection";
 import Comparison from "./landing/Comparison";
 import Stats from "./landing/Stats";
@@ -17,15 +16,30 @@ function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       <main className="pt-16">
-        <Hero />
-        <ServiceSectors />
-        <Features />
-        <AISection />
-        <Comparison />
-        <Stats />
-        <Pricing />
-        <FAQ />
-        <CTA />
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="services">
+          <ServiceSectors />
+        </section>
+        <section id="ai">
+          <AISection />
+        </section>
+        <section id="comparison">
+          <Comparison />
+        </section>
+        <section id="stats">
+          <Stats />
+        </section>
+        <section id="pricing">
+          <Pricing />
+        </section>
+        <section id="faq">
+          <FAQ />
+        </section>
+        <section id="cta">
+          <CTA />
+        </section>
       </main>
       <Footer />
       <ChatBox />
