@@ -1,50 +1,51 @@
-import { HeadphonesIcon, TrendingUp, Settings, ArrowRight } from "lucide-react";
+import { Wrench, ShieldCheck, Gauge, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const sectors = [
   {
-    icon: HeadphonesIcon,
-    title: "Customer Support",
-    description: "24/7 AI-powered support with human touch when needed",
+    icon: Wrench,
+    title: "Auto Repair Services",
+    description:
+      "Expert mechanics delivering professional repairs for all makes and models",
     benefits: [
-      "Instant response to queries",
-      "Multi-language support",
-      "Seamless ticket escalation",
-      "Customer satisfaction tracking",
+      "ASE Certified technicians",
+      "Complete diagnostic service",
+      "Brake & transmission repair",
+      "Engine maintenance & repair",
     ],
     image:
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200",
+      "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200",
     color: "from-blue-500 to-blue-600",
     bgColor: "from-blue-500/10 to-blue-600/10",
   },
   {
-    icon: TrendingUp,
-    title: "Sales",
-    description: "Intelligent sales automation and lead management",
+    icon: ShieldCheck,
+    title: "Preventive Maintenance",
+    description: "Keep your vehicle running smoothly with regular maintenance",
     benefits: [
-      "Smart lead qualification",
-      "Automated follow-ups",
-      "Sales performance analytics",
-      "Personalized recommendations",
+      "Oil & filter changes",
+      "Tire rotation & alignment",
+      "Multi-point inspections",
+      "Fluid level checks",
     ],
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
+      "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?q=80&w=1200",
     color: "from-purple-500 to-purple-600",
     bgColor: "from-purple-500/10 to-purple-600/10",
   },
   {
-    icon: Settings,
-    title: "Services",
-    description: "Comprehensive service management and optimization",
+    icon: Gauge,
+    title: "Performance & Diagnostics",
+    description: "Advanced diagnostics and performance optimization",
     benefits: [
-      "Automated scheduling",
-      "Service quality monitoring",
-      "Resource optimization",
-      "Real-time tracking",
+      "Computer diagnostics",
+      "Performance tuning",
+      "Electronic systems check",
+      "Real-time monitoring",
     ],
     image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200",
+      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200",
     color: "from-emerald-500 to-emerald-600",
     bgColor: "from-emerald-500/10 to-emerald-600/10",
   },
@@ -61,11 +62,11 @@ export default function ServiceSectors() {
           className="text-center mb-16 relative"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 text-transparent bg-clip-text">
-            Our Core Sectors
+            Professional Auto Services
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Delivering excellence across three key business areas with
-            AI-powered solutions
+            Quality auto repair and maintenance services from certified
+            professionals
           </p>
         </motion.div>
 

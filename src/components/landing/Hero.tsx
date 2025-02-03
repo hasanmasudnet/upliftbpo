@@ -1,24 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Bot, Gauge, Brain, Car } from "lucide-react";
+import {
+  ArrowRight,
+  Sparkles,
+  Wrench,
+  Gauge,
+  ShieldCheck,
+  Car,
+} from "lucide-react";
 
 const features = [
   {
-    icon: Bot,
-    title: "AI Assistant",
-    description: "24/7 intelligent support for your business operations",
+    icon: Wrench,
+    title: "Expert Repairs",
+    description: "Professional service for all makes and models",
     gradient: "from-blue-500 to-blue-600",
   },
   {
     icon: Gauge,
-    title: "Performance",
-    description: "Boost efficiency and optimize resource allocation",
+    title: "Diagnostics",
+    description: "State-of-the-art diagnostic equipment",
     gradient: "from-purple-500 to-purple-600",
   },
   {
-    icon: Brain,
-    title: "Smart Analytics",
-    description: "Data-driven insights for better decision making",
+    icon: ShieldCheck,
+    title: "Maintenance",
+    description: "Comprehensive preventive care services",
     gradient: "from-emerald-500 to-emerald-600",
   },
 ];
@@ -157,7 +164,7 @@ export default function Hero() {
             >
               <Sparkles className="h-5 w-5 text-blue-400" />
               <span className="text-blue-400 font-medium">
-                AI-Powered Solutions
+                Expert Auto Repair & Service
               </span>
             </motion.div>
 
@@ -167,10 +174,10 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-blue-400 text-transparent bg-clip-text"
             >
-              Transform Your Business with
+              Your Trusted Partner in
               <br />
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 text-transparent bg-clip-text">
-                Intelligent Automation
+                Professional Auto Care
               </span>
             </motion.h1>
 
@@ -180,8 +187,8 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10"
             >
-              Harness the power of AI to streamline operations, boost
-              efficiency, and deliver exceptional customer experiences.
+              Expert mechanics, state-of-the-art diagnostics, and comprehensive
+              service for all your vehicle maintenance and repair needs.
             </motion.p>
 
             <motion.div
@@ -202,7 +209,7 @@ export default function Hero() {
                 variant="outline"
                 className="border-blue-500/20 text-blue-400 hover:bg-blue-500/10 text-lg"
               >
-                Watch Demo
+                Schedule Service
               </Button>
             </motion.div>
           </div>
@@ -244,10 +251,10 @@ export default function Hero() {
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center"
           >
             {[
-              { value: "40%", label: "Efficiency Increase" },
-              { value: "24/7", label: "AI Availability" },
-              { value: "90%", label: "Cost Reduction" },
-              { value: "1M+", label: "Tasks Automated" },
+              { value: "25+", label: "Years Experience" },
+              { value: "24/7", label: "Emergency Service" },
+              { value: "100%", label: "Customer Satisfaction" },
+              { value: "10K+", label: "Cars Serviced" },
             ].map((stat, index) => (
               <div key={index} className="space-y-2">
                 <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">

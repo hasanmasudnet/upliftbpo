@@ -1,6 +1,6 @@
 import Hero from "./landing/Hero";
 import ServiceSectors from "./landing/ServiceSectors";
-import AISection from "./landing/AISection";
+import CustomerService from "./landing/CustomerService";
 import Comparison from "./landing/Comparison";
 import Stats from "./landing/Stats";
 import Pricing from "./landing/Pricing";
@@ -22,8 +22,8 @@ function Home() {
         <section id="services">
           <ServiceSectors />
         </section>
-        <section id="ai">
-          <AISection />
+        <section id="service-team">
+          <CustomerService />
         </section>
         <section id="comparison">
           <Comparison />
