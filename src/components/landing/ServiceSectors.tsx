@@ -1,51 +1,50 @@
-import { Wrench, ShieldCheck, Gauge, ArrowRight } from "lucide-react";
+import { HeadphonesIcon, TrendingUp, Settings, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const sectors = [
   {
-    icon: Wrench,
-    title: "Auto Repair Services",
-    description:
-      "Expert mechanics delivering professional repairs for all makes and models",
+    icon: HeadphonesIcon,
+    title: "Sales Appointment Setting",
+    description: "Comprehensive inbound and outbound call management for sales",
     benefits: [
-      "ASE Certified technicians",
-      "Complete diagnostic service",
-      "Brake & transmission repair",
-      "Engine maintenance & repair",
+      "Handle test drive & consultation inquiries",
+      "CRM data management & updates",
+      "Pre-screen leads (financing, interests)",
+      "Automated appointment reminders",
     ],
     image:
-      "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200",
+      "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=1200",
     color: "from-blue-500 to-blue-600",
     bgColor: "from-blue-500/10 to-blue-600/10",
   },
   {
-    icon: ShieldCheck,
-    title: "Preventive Maintenance",
-    description: "Keep your vehicle running smoothly with regular maintenance",
+    icon: TrendingUp,
+    title: "Customer Service Excellence",
+    description: "Multi-channel customer support and inquiry management",
     benefits: [
-      "Oil & filter changes",
-      "Tire rotation & alignment",
-      "Multi-point inspections",
-      "Fluid level checks",
+      "Dealership hours & inventory info",
+      "Live chat & email support",
+      "Complaint resolution & escalation",
+      "Post-purchase follow-up calls",
     ],
     image:
-      "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?q=80&w=1200",
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200",
     color: "from-purple-500 to-purple-600",
     bgColor: "from-purple-500/10 to-purple-600/10",
   },
   {
-    icon: Gauge,
-    title: "Performance & Diagnostics",
-    description: "Advanced diagnostics and performance optimization",
+    icon: Settings,
+    title: "Service Coordination",
+    description: "Complete service department support and coordination",
     benefits: [
-      "Computer diagnostics",
-      "Performance tuning",
-      "Electronic systems check",
-      "Real-time monitoring",
+      "Service appointment scheduling",
+      "Maintenance reminder notifications",
+      "Parts availability updates",
+      "Pickup & drop-off coordination",
     ],
     image:
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200",
+      "https://images.unsplash.com/photo-1565843708714-52ecf69ab81f?q=80&w=1200",
     color: "from-emerald-500 to-emerald-600",
     bgColor: "from-emerald-500/10 to-emerald-600/10",
   },
@@ -62,11 +61,11 @@ export default function ServiceSectors() {
           className="text-center mb-16 relative"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 text-transparent bg-clip-text">
-            Professional Auto Services
+            AI-Enhanced Offshore Teams
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Quality auto repair and maintenance services from certified
-            professionals
+            Combining skilled offshore agents with AI technology for superior
+            auto service support and customer experience
           </p>
         </motion.div>
 

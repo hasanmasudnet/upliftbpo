@@ -1,76 +1,60 @@
-import { Users, HeadphonesIcon, Clock, MessageSquare } from "lucide-react";
+import { HeadphonesIcon, MessageSquare, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 
 const features = [
   {
-    icon: Users,
-    title: "Expert Service Team",
-    description:
-      "Our certified technicians provide personalized attention to every vehicle",
-    image:
-      "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200",
-    gradient: "from-blue-500 to-blue-600",
-  },
-  {
     icon: HeadphonesIcon,
-    title: "24/7 Support",
+    title: "Cost Savings",
     description:
-      "Live agents during business hours, with instant digital assistance anytime",
+      "Reduce overhead costs significantly compared to in-house staffing",
+    gradient: "from-blue-500 to-blue-600",
     image:
-      "https://images.unsplash.com/photo-1625047509248-ec889cbff17f?q=80&w=1200",
-    gradient: "from-purple-500 to-purple-600",
-  },
-  {
-    icon: Clock,
-    title: "Quick Response",
-    description:
-      "Fast service scheduling and real-time updates on your vehicle",
-    image:
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200",
-    gradient: "from-emerald-500 to-emerald-600",
+      "https://images.unsplash.com/photo-1522071901873-411886a10004?q=80&w=1200",
   },
   {
     icon: MessageSquare,
-    title: "Clear Communication",
-    description:
-      "Direct line to our service team with digital updates for convenience",
+    title: "24/7 Support",
+    description: "Round-the-clock support improving customer experience",
+    gradient: "from-purple-500 to-purple-600",
     image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200",
-    gradient: "from-indigo-500 to-indigo-600",
+      "https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=1200",
+  },
+  {
+    icon: Clock,
+    title: "Scalable Operations",
+    description:
+      "Easily scale during peak seasons without burdening in-house teams",
+    gradient: "from-emerald-500 to-emerald-600",
+    image:
+      "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=1200",
+  },
+  {
+    icon: Shield,
+    title: "Improved Efficiency",
+    description:
+      "Focus dealership staff on in-person interactions while we handle administrative tasks",
+    gradient: "from-amber-500 to-amber-600",
+    image:
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200",
   },
 ];
 
 export default function CustomerService() {
   return (
-    <div className="py-24 bg-gradient-to-b from-gray-950 to-gray-900 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute -top-1/2 -right-1/2 w-[100rem] h-[100rem]">
-          <div
-            className="absolute inset-0 bg-gradient-conic from-blue-500/30 via-purple-500/30 to-emerald-500/30 animate-spin-slow"
-            style={{ clipPath: "circle(50% at center)" }}
-          />
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-blue-400 text-transparent bg-clip-text">
-            Personal Service First
+    <div className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold mb-4">
+            Streamline Your Dealership Operations
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Expert technicians and dedicated service advisors, supported by
-            modern technology for the best customer experience
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Enhance efficiency and customer satisfaction with our trained
+            offshore agents handling appointments, customer service, and service
+            coordination
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -80,11 +64,7 @@ export default function CustomerService() {
               transition={{ delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-2xl bg-gray-900 border border-gray-800 transition-all duration-300 hover:border-gray-700 h-full">
-                {/* Hover Gradient Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-gray-800/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                {/* Image with Gradient Overlay */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden h-full">
                 <div className="relative h-48 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/90" />
                   <img
@@ -96,7 +76,7 @@ export default function CustomerService() {
 
                 {/* Content */}
                 <div className="p-6 text-center relative">
-                  {/* Icon - Now positioned relative to content */}
+                  {/* Icon - Positioned relative to content */}
                   <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
                     <div
                       className={`p-4 rounded-xl bg-gradient-to-r ${feature.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}
@@ -104,45 +84,16 @@ export default function CustomerService() {
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-400 group-hover:to-purple-400 transition-colors duration-300">
+
+                  <h3 className="text-xl font-semibold mb-2 mt-4">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                    {feature.description}
-                  </p>
-                </div>
-
-                {/* Hover Effect Line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1">
-                  <div
-                    className={`h-full bg-gradient-to-r ${feature.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}
-                  />
+                  <p className="text-gray-600">{feature.description}</p>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-lg group"
-          >
-            Meet Our Team
-            <motion.span
-              className="ml-2"
-              animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              →
-            </motion.span>
-          </Button>
-        </motion.div>
       </div>
     </div>
   );
